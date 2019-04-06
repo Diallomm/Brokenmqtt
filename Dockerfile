@@ -7,7 +7,7 @@ MAINTAINER Diallomm <misterdiallo1@gmail.com>
 RUN apt-get update -y
 
 #Install Wget and gnup2
-RUN apt-get install wget -y && apt-get install gnupg2 -y 
+RUN apt-get install wget -y && apt-get install gnupg2 -y && apt-get install vim -y 
 
 #Download and add key
 RUN wget http://repo.mosquitto.org/debian/mosquitto-repo.gpg.key 
