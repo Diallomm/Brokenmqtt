@@ -15,7 +15,8 @@ for build dockerfile you need to create ssl file, let's go
 -1 download git repository [link](https://github.com/Diallomm/Brokenmqtt/archive/master.zip)
 
 -2 Go to "certs" on repository folder and create ssl file 
-	cd BrokenMqtt/certs 
+
+	cd Brokenmqtt-master/certs 
 
 	openssl genrsa -des3 -out mosquitto-ca.key 2048
 
@@ -26,14 +27,14 @@ for build dockerfile you need to create ssl file, let's go
 	openssl req -new -out mosquitto-server.csr -key mosquitto-server.key (Answer all question | don't copy the bracket part)
 
 
-### step two : creer docker images 
+### step two : create docker images 
 run command for builder images
 
 	docker build . -t ssl_mosquitto_broken:latest	("ssl_mosquitto_broken" is a name of images you can change it | don't copy the bracket part) 
 
 wait for building, normally all is good after building 
 
-### step three : creer docker container 
+### step three : create docker container 
 run command for create container
  
 	docker run -itd --name broken -p 8883:8883 ssl_mosquitto_broken
@@ -42,7 +43,7 @@ normally if your type "docker ps" you can see you container run at ports 0.0.0.0
 
 to connect on broken you need add Ca cerficate "mosquitto-ca.crt" on configuration client  
 
-you can use your broken on your application for exemple with Node-red
+you can use your broken on your application for example with Node-red
 
 ![node red](img/node-red-ssl.png) 
 ![node red](img/node-red-ssl-1.png)
@@ -63,12 +64,13 @@ add this inside just before  "include_dir /etc/mosquitto/conf.d"
 	allow_anonymous false
 
 run command exit and reboot
+
 	exit
 	
 	docker restart broken 
 ----
 
-## The end the moment | coming soon for next
+## The end for now  | coming soon for next
 
 All contribution is welcome.
  
