@@ -12,8 +12,9 @@ for build dockerfile you need to create ssl file, let's go
 
 ----
 ### Step one : Create ssl file 
-- 1 = download git repository [link](https://github.com/Diallomm/Brokenmqtt/archive/master.zip)
-- 2 = Go to "certs" on repository folder and create ssl file 
+-1 download git repository [link](https://github.com/Diallomm/Brokenmqtt/archive/master.zip)
+
+-2 Go to "certs" on repository folder and create ssl file 
 	cd BrokenMqtt/certs 
 
 	openssl genrsa -des3 -out mosquitto-ca.key 2048
@@ -38,7 +39,9 @@ run command for create container
 	docker run -itd --name broken -p 8883:8883 ssl_mosquitto_broken
 
 normally if your type "docker ps" you can see you container run at ports 0.0.0.0:8883->8883/tcp if you can't see it you have a problem.
+
 to connect on broken you need add Ca cerficate "mosquitto-ca.crt" on configuration client  
+
 you can use your broken on your application for exemple with Node-red
 
 ![node red](img/node-red-ssl.png) 
