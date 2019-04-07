@@ -14,7 +14,6 @@ for build dockerfile you need to create ssl file, let's go
 ### Step one : Create ssl file 
 - 1 = download git repository [link](https://github.com/Diallomm/Brokenmqtt/archive/master.zip)
 - 2 = Go to "certs" on repository folder and create ssl file 
-
 	cd BrokenMqtt/certs 
 
 	openssl genrsa -des3 -out mosquitto-ca.key 2048
