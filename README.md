@@ -1,20 +1,19 @@
-Mqtt broken with Eclipse-Mosquitto
+# Mqtt broken with Eclipse-Mosquitto
 
-----
 this repository allow you to create a broken mqtt with ssl security on Docker 
 
 for build dockerfile you need to create ssl file, let's go 
 
 ----
 ### requirement
--[x] Cloud server or computer work with linux system 
--[x] Docker 
--[x] network connection (Lol!) 
+- [x] Cloud server or computer work with linux system 
+- [x] Docker 
+- [x] network connection (Lol!) 😂
 
 ----
 ### Step one : Create ssl file 
-1- download git repository [link](https://github.com/Diallomm/Brokenmqtt/archive/master.zip)
-2- Go to "certs" on repository folder and create ssl file 
+- 1 = download git repository [link](https://github.com/Diallomm/Brokenmqtt/archive/master.zip)
+- 2 = Go to "certs" on repository folder and create ssl file 
 
 	cd BrokenMqtt/certs 
 
@@ -69,5 +68,6 @@ run command exit and reboot
 
 ## The end the moment | coming soon for next
 
-All contribution is welcome 
+All contribution is welcome.
+ 
 by Diallomm [Email](misterdiallo1@gmail.com) 
