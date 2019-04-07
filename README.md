@@ -4,6 +4,8 @@ this repository allow you to create a broken mqtt with ssl security on Docker
 
 for build dockerfile you need to create ssl file, let's go 
 
+if you don't know what is Mqtt check this tuto [Mqtt french](https://bloctechno.wordpress.com/2018/09/21/le-protocole-mqtt-message-queue-telemetry-transport/), or google for english language 
+
 ----
 ### requirement
 - [x] Cloud server or computer work with linux system 
